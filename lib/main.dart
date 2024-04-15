@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mdev1005_assignment3/home/HomePageScreen.dart';
+import 'package:mdev1005_assignment3/home/calculator/CalculatorScreen.dart';
+import 'package:mdev1005_assignment3/routes/Routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,11 +22,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-             foregroundColor : Colors.white,
-            )),
+          foregroundColor: Colors.white,
+        )),
       ),
-
-      home: const HomeScreen(),
+      initialRoute: Routes.home,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }

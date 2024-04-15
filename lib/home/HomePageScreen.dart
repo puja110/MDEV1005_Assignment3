@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mdev1005_assignment3/home/calculator/CalculatorScreen.dart';
-import 'package:mdev1005_assignment3/home/notes/NotesScreen.dart';
+import 'package:mdev1005_assignment3/routes/Routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -31,10 +30,7 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: () {
                     // Navigate to calculator screen
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => CalculatorScreen()),
-                    );
+                    Routes.navigateTo(context, Routes.calculator);
                   },
                   icon: const Icon(Icons.calculate),
                   label: const Text(
@@ -60,10 +56,6 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: () {
                     // Navigate to notes screen
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const NotesScreen()),
-                    );
                   },
                   icon: const Icon(Icons.cloud),
                   label: const Text(
