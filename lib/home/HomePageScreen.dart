@@ -56,6 +56,8 @@ class HomeScreen extends StatelessWidget {
                 child: ElevatedButton.icon(
                   onPressed: () {
                     // Navigate to notes screen
+                    Routes.navigateTo(context, Routes.notes);
+
                   },
                   icon: const Icon(Icons.cloud),
                   label: const Text(

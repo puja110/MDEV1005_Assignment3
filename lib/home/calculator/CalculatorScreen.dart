@@ -14,13 +14,17 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   String _operand = '';
   String _outputHistory = '';
 
+  //calculation and logic for the calculator when the buttons are pressed
   void _buttonPressed(String buttonText) {
+    //helps clear the values or text when user clicks "C"
     if (buttonText == 'C') {
       _output = '0';
       _num1 = 0.0;
       _num2 = 0.0;
       _operand = '';
       _outputHistory = '';
+
+      //helps with the values such as add, substract, multiply, divide user clicks operands
     } else if (buttonText == '+' ||
         buttonText == '-' ||
         buttonText == '×' ||
@@ -29,10 +33,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       _operand = buttonText;
       _outputHistory = _output + _operand;
       _output = '0';
+      //helps with the decimal values
     } else if (buttonText == '.') {
       if (!_output.contains('.')) {
         _output += buttonText;
       }
+      //helps with calculation of the total
     } else if (buttonText == '=') {
       _num2 = double.parse(_output);
       String result = '0';
@@ -49,10 +55,11 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           result = 'Error';
         }
       }
+      //sets the result or output to the textview
       _outputHistory = double.parse(result).toStringAsFixed(
           double.parse(result).truncateToDouble() == double.parse(result)
               ? 0
-              : 1);
+              : 1); // Display only if fractional part exists
       _output = double.parse(result).toStringAsFixed(result.contains('.')
           ? 2
           : 0); // Display only if fractional part exists
@@ -67,9 +74,11 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       }
       _outputHistory = _output;
     }
+    //setstate function to refresh the view and show if there are any changes to the data
     setState(() {});
   }
 
+  //custom button for all the views
   Widget buildButton(String buttonText) {
     return Expanded(
       child: Padding(
