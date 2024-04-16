@@ -12,9 +12,9 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final String _apiKey = '01a5e44188324b300bfc7e2cd1da9370'; 
-  final String _apiUrl = 'https://api.openweathermap.org/data/3.0/onecall';
-  final double _latitude = 33.44; // Latitude of the location
-  final double _longitude = -94.04; // Longitude of the location
+  final String _apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
+  final double _latitude = 44.3894; // Latitude of Barrie, Canada
+  final double _longitude = -79.6903; // Longitude of Barrie, Canada
 
   double? _temperature;
   String? _weatherCondition;
@@ -29,8 +29,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
         final weatherData = json.decode(response.body);
 
         setState(() {
-          _temperature = (weatherData['current']['temp'] - 273.15); // Convert temperature from Kelvin to Celsius
-          _weatherCondition = weatherData['current']['weather'][0]['description'];
+          _temperature = (weatherData['main']['temp'] - 273.15); // Convert temperature from Kelvin to Celsius
+          _weatherCondition = weatherData['weather'][0]['description'];
           _isLoading = false;
         });
       } else {
