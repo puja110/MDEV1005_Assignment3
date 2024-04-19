@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mdev1005_assignment3/home/HomePageScreen.dart';
-import 'package:mdev1005_assignment3/home/calculator/CalculatorScreen.dart';
 import 'package:mdev1005_assignment3/routes/Routes.dart';
 
 void main() {
@@ -25,8 +23,8 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
         )),
       ),
-      initialRoute: Routes.home,
-      onGenerateRoute: Routes.generateRoute,
+       initialRoute: Routes.greeting,
+      onGenerateRoute: Routes.generateRoute
     );
   }
 }
