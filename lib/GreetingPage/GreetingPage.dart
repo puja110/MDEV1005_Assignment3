@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mdev1005_assignment3/routes/Routes.dart';
 
 class GreetingPage extends StatelessWidget {
-  const GreetingPage({Key? key}) : super(key: key);
+  const GreetingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome'),
+        title: const Text('Welcome'),
       ),
       body: Center( // Center widget to center the column
         child: Column(
@@ -16,7 +16,7 @@ class GreetingPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Greeting message
-            Text(
+            const Text(
               'Welcome to Our App!',
               style: TextStyle(
                 fontSize: 24,
@@ -24,7 +24,7 @@ class GreetingPage extends StatelessWidget {
               ),
               textAlign: TextAlign.center, // Center the text
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Image
             Image.asset(
               'assets/images/welcome_image.jpg',
@@ -32,17 +32,17 @@ class GreetingPage extends StatelessWidget {
               height: 200,
               fit: BoxFit.contain,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Button to navigate to home page
             ElevatedButton(
               onPressed: () {
                 // Navigate to home page
                 Routes.navigateTo(context, Routes.home);
               },
-              child: Text('Get Started'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue, // Set button color to blue
               ),
+              child: const Text('Get Started'),
             ),
           ],
         ),
