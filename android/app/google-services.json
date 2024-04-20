@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "794233388657",
+    "project_id": "flutterassignment3",
+    "storage_bucket": "flutterassignment3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794233388657:android:be35a6d0c6abbc6bf425d0",
+        "android_client_info": {
+          "package_name": "com.example.mdev1005_assignment3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClBXOFDq7K2Av4V3cF3ZZ78GmE9KzkbW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
