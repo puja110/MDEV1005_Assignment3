@@ -8,12 +8,12 @@ import 'package:mdev1005_assignment3/login/LoginScreen.dart';
 import 'package:mdev1005_assignment3/register/RegisterScreen.dart';
 
 class Routes {
-  static const String greeting = '/greeting';
+  static const String greeting = '/';
   static const String home = '/home';
   static const String calculator = '/calculator';
   static const String notes = '/notes';
   static const String weather = '/weather';
-  static const String login = '/';
+  static const String login = '/login';
   static const String register = '/register';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {

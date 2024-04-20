@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () async {
                 await _authService.signOut();
                 // Navigate to login screen
-                Routes.navigateTo(context, Routes.login);
+                Routes.navigateTo(context, Routes.greeting);
               },
               child: const Text('Logout'),
             ),

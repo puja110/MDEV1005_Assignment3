@@ -37,7 +37,7 @@ class GreetingPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Navigate to home page
-                Routes.navigateTo(context, Routes.home);
+                Routes.navigateTo(context, Routes.login);
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue, // Set button color to blue
